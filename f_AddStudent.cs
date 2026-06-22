@@ -12,7 +12,7 @@ namespace QuanLySinhVien
         private byte[] studentImage = null;
 
         // Định nghĩa sẵn các chuỗi mẫu biểu thức chính quy (Regex) dùng chung
-        private readonly string namePattern = @"^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂÂÊÔƠỨỪỬỮỰẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăâêôơứừửữựấẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪỬỮỰYỲÝỶỸỸửữựỳýỷỹ\s]+$";
+        private readonly string namePattern = @"^[\p{L}\s]+$";
         private readonly string emailPattern = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
         private readonly string phonePattern = @"^\d{9,11}$"; // Số điện thoại từ 9 đến 11 chữ số
 
@@ -251,6 +251,11 @@ namespace QuanLySinhVien
             {
                 picStudent.Image.Dispose();
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

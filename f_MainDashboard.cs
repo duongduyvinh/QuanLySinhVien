@@ -33,7 +33,7 @@ namespace QuanLySinhVien
 
             btnSinhVien.Click += (s, e) =>
             {
-                if (HasPermission(0, 2))
+               
                     OpenChildForm(new f_ListStudent());
             };
 

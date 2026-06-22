@@ -30,7 +30,35 @@ namespace QuanLySinhVien
 
            
         }
+        private void ApplyRolePermissions()
+        {
+            switch (Globals.GlobalUserRole)
+            {
+                case 0: // Admin
+                    btnSua.Visible = true;
+                    btnThem.Visible = true;
+                    btnXoa.Visible = true;
+                    break;
 
+                case 1: // Sinh viên
+                    btnXoa.Visible = false;
+                    btnThem.Visible = false;
+                    btnSua.Visible = false;
+                    break;
+
+                case 2: // HR
+                    btnThem.Visible = true;
+                    btnXoa.Visible = true;
+                    btnSua.Visible= true;
+                    break;
+
+                default:
+                    btnSua.Visible = false;
+                    btnThem.Visible = false;
+                    btnXoa.Visible = false;
+                    break;
+            }
+        }
         private void f_ContactManage_Load(object sender, EventArgs e)
         {
             isInitializing = true;
@@ -40,7 +68,7 @@ namespace QuanLySinhVien
             dtpDob.Value = DateTime.Today;
 
             LoadGroupsToComboBoxes();
-
+            ApplyRolePermissions();
             isInitializing = false;
             LoadContactGrid();
         }

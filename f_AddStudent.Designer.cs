@@ -2,30 +2,17 @@
 {
     partial class f_AddStudent
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -56,6 +43,7 @@
             this.picStudent = new System.Windows.Forms.PictureBox();
             this.btnChooseImage = new System.Windows.Forms.Button();
             this.panelCodeLink = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelInfo.SuspendLayout();
             this.panelAvatar.SuspendLayout();
@@ -95,7 +83,7 @@
             // lblTitleInfo
             // 
             this.lblTitleInfo.AutoSize = true;
-            this.lblTitleInfo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleInfo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitleInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(79)))), ((int)(((byte)(128)))));
             this.lblTitleInfo.Location = new System.Drawing.Point(24, 20);
             this.lblTitleInfo.Name = "lblTitleInfo";
@@ -289,7 +277,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(190, 455);
+            this.btnAdd.Location = new System.Drawing.Point(44, 455);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(160, 45);
             this.btnAdd.TabIndex = 19;
@@ -304,11 +292,11 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(365, 455);
+            this.btnClear.Location = new System.Drawing.Point(266, 455);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 45);
             this.btnClear.TabIndex = 20;
-            this.btnClear.Text = "Xóa trắng";
+            this.btnClear.Text = "Làm mới";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -337,11 +325,10 @@
             // picStudent
             // 
             this.picStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
-            this.picStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picStudent.Location = new System.Drawing.Point(153, 75);
             this.picStudent.Name = "picStudent";
             this.picStudent.Size = new System.Drawing.Size(195, 271);
-            this.picStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picStudent.TabIndex = 1;
             this.picStudent.TabStop = false;
             // 
@@ -368,6 +355,25 @@
             this.panelCodeLink.Size = new System.Drawing.Size(491, 361);
             this.panelCodeLink.TabIndex = 2;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.Gray;
+            this.btnClose.Location = new System.Drawing.Point(1208, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(27, 34);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TabStop = false;
+            this.btnClose.Text = "✕";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -378,6 +384,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
             this.ClientSize = new System.Drawing.Size(1243, 888);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panelCodeLink);
             this.Controls.Add(this.panelAvatar);
             this.Controls.Add(this.panelInfo);
@@ -418,13 +425,12 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
-
         private System.Windows.Forms.Panel panelAvatar;
         private System.Windows.Forms.Label lblTitleAvatar;
         private System.Windows.Forms.PictureBox picStudent;
         private System.Windows.Forms.Button btnChooseImage;
-
         private System.Windows.Forms.Panel panelCodeLink;
+        private System.Windows.Forms.Button btnClose;              // ✅ Khai báo nút X
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

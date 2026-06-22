@@ -17,7 +17,7 @@ namespace QuanLySinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new f_MainDashboard("AD01",0,"vido","duongduyvinh206@gmail.com"));
+            Application.Run(new f_Login());
         }
     }
 }
